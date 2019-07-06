@@ -1,0 +1,12 @@
+<TraditionalZombies_NoBlockDamage>
+
+<!--Reduces zombie block damage to 1-->
+	<set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@name='DamageBlock']/@value">0</set>
+	<set xpath="/items/item[contains(@name, 'HandZombie') or contains(@name, 'HandAnimal')]/property[@class='Action0']/property[@name='DamageBlock']/@value">0</set>
+	<set xpath="/items/item[contains(@name, 'Vomit')]/property[@class='Action1']/property[@name='DamageBlock']/@value">0</set>
+	
+<!-- Removes damage modifiers ('HandZombie' do not have any to remove currently) -->
+	<remove xpath="/items/item[contains(@name, 'Vomit') or contains(@name, 'HandAnimal')]/effect_group[@name='Base Effects']/passive_effect[@name='DamageModifier']" />
+	<remove xpath="/items/item[contains(@name, 'Vomit') or contains(@name, 'HandAnimal')]/effect_group[@name='Base Effects']/passive_effect[@name='DamageModifier']" />
+	
+</TraditionalZombies_NoBlockDamage>
